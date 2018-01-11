@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<script>
+  fetch("/target/wasm32-unknown-unknown/release/wasmtest.wasm").then(response =>
+    response.arrayBuffer()
+  ).then(bytes =>
+    WebAssembly.instantiate(bytes, {env: {meow: (x) => x*2}})
+  ).then(res => {
+    window.mod = res.instance
+  })
+</script>

@@ -1,0 +1,9 @@
+[package]
+name = "wasmtest"
+version = "0.1.0"
+authors = ["Robert Lord <robert@lord.io>"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
